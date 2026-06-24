@@ -1,0 +1,27 @@
+[workspace]
+authors = ["Huynh Tan Cuong <huynhtancuong.hcm@gmail.com>"]
+channels = ["conda-forge"]
+name = "ur5e_project"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+config-jupyter = "python -m ipykernel install --user --name rmpc-env --display-name 'RMPC (Pixi Env)'"
+
+[dependencies]
+mujoco = ">=3.9.0,<4"
+numpy = ">=2.4.6,<3"
+matplotlib = ">=3.11.0,<4"
+mypy = ">=2.1.0,<3"
+scipy = ">=1.17.1,<2"
+mediapy = ">=1.2.6,<2"
+ipympl = ">=0.10.0,<0.11"
+scikit-image = ">=0.26.0,<0.27"
+ipykernel = ">=7.3.0,<8"
+tqdm = ">=4.68.3,<5"
+
+[pypi-dependencies]
+ur-rtde = ">=1.6.3, <2"
+opencv-python = ">=4.13.0.92, <5"
+rdp = ">=0.8, <0.9"
+roboticstoolbox-python = { version = ">=1.3.0, <2", extras = ["swift"] }
